@@ -1,6 +1,8 @@
 unparse-args
 =================
 
+[![Build Status](https://travis-ci.org/arjunmehta/node-unparse-args.svg?branch=master)](https://travis-ci.org/arjunmehta/node-unparse-args)
+
 A node.js module to help you unparse parsed arguments back to the original argv array or a command string.
 
 ## Purpose
