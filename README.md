@@ -5,7 +5,7 @@ unparse-args
 
 A node.js module to help you unparse parsed arguments back to the original argv array or a command string.
 
-## Purpose
+## Use Scenario
 
 Imagine a hypothetical command string with flags, subcommands, options... etc:
 
@@ -13,7 +13,7 @@ Imagine a hypothetical command string with flags, subcommands, options... etc:
 node example.js another --number 297261 -t something -x 'something longer than just 1 word' -a -e
 ```
 
-Popular argument parsing modules for node.js yargs, subargs, and minimist all parse these into an object like: 
+Popular argument parsing modules for node.js: [yargs](https://github.com/chevex/yargs), [subarg](https://github.com/substack/subarg), and [minimist](https://github.com/substack/minimist) all parse these into an object like: 
 
 ```javascript
 { 
@@ -26,12 +26,10 @@ Popular argument parsing modules for node.js yargs, subargs, and minimist all pa
 }
 ```
 
-Unparse parsed arguments back to an argv pseudo-array or a command string.
-
-Works with:
-- **yargs/optimist**
-- **minimist**
-- **subarg** (and handles subcontexts)
+**This module will:**
+- **unparse parsed arguments back to an argv array**
+- **easily regenerate a command string based on the unparsed array**
+- **work with [yargs](https://github.com/chevex/yargs), [minimist](https://github.com/substack/minimist), and [subarg](https://github.com/substack/subarg) (also handles subcontexts)**
 
 ## Installation
 ```bash
@@ -46,8 +44,6 @@ npm install --save unparse-args
 var unparse = require('unparse-args');
 ```
 
-### Unparse Parsed Arguments
-
 Assume some parsed arguments.
 ```javascript
 var parsed = subarg(process.argv);
@@ -56,6 +52,8 @@ var parsed = minimist(process.argv);
 // OR
 var parsed = require('yargs').parse(process.argv);
 ```
+
+### Unparse Parsed Arguments
 
 Easily unparse them into an array.
 ```javascript
