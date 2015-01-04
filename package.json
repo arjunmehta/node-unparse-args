@@ -1,6 +1,6 @@
 {
     "name": "unparse-args",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Unparse parsed arguments back to the original argv array or a command string.",
     "main": "main.js",
     "scripts": {

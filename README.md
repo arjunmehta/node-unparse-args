@@ -20,14 +20,19 @@ node example.js another --number 297261 -t something -x 'something longer than j
 Popular argument parsing modules for node.js: [yargs](https://github.com/chevex/yargs), [subarg](https://github.com/substack/subarg), and [minimist](https://github.com/substack/minimist) all parse these into an object like: 
 
 ```javascript
-{ 
+var args = { 
     _: [ 'node', '/Users/arjun/example/example.js', 'another' ],
     number: 297261,
     t: 'something',
     x: 'something longer than just 1 word',
     a: true,
     e: true
-}
+};
+```
+
+But we might want to manipulate it and flatten it out again to be like:
+```javascript
+['node', '/Users/arjun/example/example.js', 'another', '--number', '297261', '-t', 'something', '-x', 'something longer than just 1 word', '-a', '-e']
 ```
 
 ## Installation
