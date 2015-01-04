@@ -5,8 +5,12 @@ unparse-args
 
 A node.js module to help you unparse parsed arguments back to the original argv array or a command string.
 
-## Use Scenario
+This module will:
+- **unparse parsed arguments back to an argv array**
+- **easily regenerate a command string based on the unparsed array**
+- **work with [yargs](https://github.com/chevex/yargs), [minimist](https://github.com/substack/minimist), and [subarg](https://github.com/substack/subarg) (also handles subcontexts)**
 
+## Use Scenario
 Imagine a hypothetical command string with flags, subcommands, options... etc:
 
 ```bash
@@ -25,11 +29,6 @@ Popular argument parsing modules for node.js: [yargs](https://github.com/chevex/
     e: true
 }
 ```
-
-**This module will:**
-- **unparse parsed arguments back to an argv array**
-- **easily regenerate a command string based on the unparsed array**
-- **work with [yargs](https://github.com/chevex/yargs), [minimist](https://github.com/substack/minimist), and [subarg](https://github.com/substack/subarg) (also handles subcontexts)**
 
 ## Installation
 ```bash
@@ -68,7 +67,7 @@ var command_string = unparsed.command_string;
 console.log(command_string); // node example.js another --number 297261 -t something -x $'something longer than just 1 word' -a -e
 ```
 
-I know I know, unparsed is an `array`, so how can it have a **property**?? Magic.
+I know I know, unparsed is an `array`, so how can it have a **property**?? [Magic](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
 
 ## License
 
