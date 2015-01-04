@@ -45,7 +45,7 @@ var minimist_parsed = minimist(fake_argv);
 var yargs_parsed = require('yargs').parse(fake_argv);
 
 // console.log('subarg_parsed', subarg_parsed);
-console.log('minimist_parsed', minimist_parsed);
+// console.log('minimist_parsed', minimist_parsed);
 // console.log('yargs_parsed', yargs_parsed);
 
 exports['Exported Properly'] = function(test) {
