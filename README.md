@@ -3,7 +3,7 @@ unparse-args
 
 [![Build Status](https://travis-ci.org/arjunmehta/node-unparse-args.svg?branch=master)](https://travis-ci.org/arjunmehta/node-unparse-args)
 
-A node.js module to help you unparse parsed arguments back to the original argv array or a command string.
+A Node module to help you unparse parsed arguments back to the original argv array or a command string.
 
 This module will:
 - **unparse parsed arguments back to an argv array**
@@ -17,7 +17,7 @@ Imagine a hypothetical command string with flags, subcommands, options... etc:
 node example.js another --number 297261 -t something -x 'something longer than just 1 word' -a -e
 ```
 
-Popular argument parsing modules for node.js: [yargs](https://github.com/chevex/yargs), [subarg](https://github.com/substack/subarg), and [minimist](https://github.com/substack/minimist) all parse these into an object like: 
+Popular argument parsing modules for Node: [yargs](https://github.com/chevex/yargs), [subarg](https://github.com/substack/subarg), and [minimist](https://github.com/substack/minimist) all parse these into an object like: 
 
 ```javascript
 var args = { 
