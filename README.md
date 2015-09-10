@@ -54,7 +54,7 @@ var parsed = subarg(process.argv);
 // OR
 var parsed = minimist(process.argv);
 // OR
-var parsed = require('yargs').parse(process.argv);
+var parsed = yargs.parse(process.argv);
 ```
 
 ### Unparse Parsed Arguments
