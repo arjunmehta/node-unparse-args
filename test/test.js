@@ -101,7 +101,7 @@ exports['Minimist Command String'] = function(test) {
     var unparsed = unparse(minimist_parsed);
     var unparsed_command_string = unparsed.command_string;
 
-    test.equal(unparsed_command_string, "node $'/Users/arjun/example/example.js' another --number 297261 -t something -x $'something longer than just 1 word' -a -e");
+    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' -a -e");
     test.done();
 };
 
@@ -112,7 +112,7 @@ exports['Subarg Command String with SubContexts'] = function(test) {
     var unparsed = unparse(subarg_parsed);
     var unparsed_command_string = unparsed.command_string;
 
-    test.equal(unparsed_command_string, "node $'/Users/arjun/example/example.js' another --number 297261 -t something -x $'something longer than just 1 word' -a -e $'[' subcontext here -w another -a $'something else' -b 276287 $']'");
+    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' -a -e '[' subcontext here -w another -a 'something else' -b 276287 ']'");
     test.done();
 };
 
