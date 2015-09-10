@@ -69,7 +69,7 @@ console.log(unparsed); // ['node', 'example.js', 'another', '--number', '297261'
 
 ```javascript
 var command_string = unparsed.command_string;
-console.log(command_string); // node example.js another --number 297261 -t something -x $'something longer than just 1 word' -a -e
+console.log(command_string); // node example.js another --number 297261 -t something -x 'something longer than just 1 word' -a -e
 ```
 
 I know I know, unparsed is an `array`, so how can it have a **property**?? [Magic](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
