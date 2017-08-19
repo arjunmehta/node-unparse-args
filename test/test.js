@@ -12,7 +12,7 @@ var fake_argv = [
     'something',
     '-x',
     'something longer than just 1 word',
-    '-a',
+    '--no-bool',
     '-e'
 ];
 
@@ -26,7 +26,7 @@ var fake_argv_withSubcontext = [
     'something',
     '-x',
     'something longer than just 1 word',
-    '-a',
+    '--no-bool',
     '-e',
     '[',
     'subcontext',
@@ -44,7 +44,6 @@ var subarg_parsed = subarg(fake_argv_withSubcontext);
 var minimist_parsed = minimist(fake_argv);
 var yargs_parsed = require('yargs').parse(fake_argv);
 
-
 exports['Exported Properly'] = function(test) {
     test.expect(1);
     test.equal(typeof unparse, 'function');
@@ -57,7 +56,6 @@ exports['Unparse Subarg with SubContexts'] = function(test) {
     var i;
 
     test.expect(fake_argv_withSubcontext.length);
-
 
     for (i = fake_argv_withSubcontext.length - 1; i >= 0; i--) {
         test.equal(fake_argv_withSubcontext[i], unparsed[i]);
@@ -99,7 +97,7 @@ exports['Minimist Command String'] = function(test) {
 
     test.expect(1);
 
-    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' -a -e");
+    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' --no-bool -e");
     test.done();
 };
 
@@ -109,7 +107,7 @@ exports['Subarg Command String with SubContexts'] = function(test) {
 
     test.expect(1);
 
-    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' -a -e '[' subcontext here -w another -a 'something else' -b 276287 ']'");
+    test.equal(unparsed_command_string, "node '/Users/arjun/example/example.js' another --number 297261 -t something -x 'something longer than just 1 word' --no-bool -e '[' subcontext here -w another -a 'something else' -b 276287 ']'");
     test.done();
 };
 

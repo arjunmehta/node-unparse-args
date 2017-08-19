@@ -104,7 +104,8 @@
     "brace-style": [2,
       "1tbs", {
         "allowSingleLine": true
-      }],
+      }
+    ],
     "quotes": [
       2, "single", "avoid-escape"
     ],
